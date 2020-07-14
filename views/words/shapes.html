@@ -35,6 +35,10 @@
     width: 1000px;
   }
 
+  .circle:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px , rgba(0, 0, 0, 0.2);
+  }
 </style>
 
 <body>
@@ -70,24 +74,27 @@
 
         </div>
         <div class="card-footer text-center">
-          <button type="button" class="btn blue-gradient hide" onclick="mySlide('prev');"
+          <button type="button" class="circle btn blue-gradient hide" onclick="mySlide('prev');"
             id="back" name="back"><i class="fas fa-angle-double-left"></i> Back</button>
-          <button type="button" class="btn btn-mdb-color" onclick="mySlide('back');" id="next">
+          <button type="button" class="circle btn btn-mdb-color" onclick="mySlide('back');" id="next">
           <i class="fas fa-step-backward"></i> </button>
-          <button style="border-radius: 60%; font-size:70px;" class="btn btn-blue-grey"
+          <button style="border-radius: 60%; font-size:70px;" class="circle btn btn-blue-grey"
             onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
-          <button type="button" class="btn btn-mdb-color" onclick="mySlide('next');" id="next">
+          <button type="button" class="btn btn-mdb-color circle" onclick="mySlide('next');" id="next">
           <i class="fas fa-step-forward"></i> </button></button>
         </div>
       </div>
     </div>
   </div>
 
+
+
   <script>
-    $(document).ready(function () {
-      new WOW().init();
-    });
+      $(document).ready(function () {
+          new WOW().init();
+      });
   </script>
+
 </body>
 
 </html>
